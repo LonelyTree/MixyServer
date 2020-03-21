@@ -6,7 +6,6 @@ const resolvers = {
 		getRandomDrink: async (_source, _, { dataSources }) => {
 			return dataSources.mixyAPI.getRandomDrink()
 		},
-		//Find out how to pass arguments through gql :)
 		getDrink: async (_source, { id }, { dataSources }) => {
 			return dataSources.mixyAPI.getDrinkById({ drinkId: id })
 		},

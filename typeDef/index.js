@@ -2,7 +2,7 @@ const { gql } = require('apollo-server')
 
 const typeDefs = gql`
 	type RandomDrink {
-		id: String!
+		id: String
 		name: String!
 		desc: String!
 		img: String!

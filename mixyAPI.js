@@ -24,7 +24,7 @@ class MixyAPI extends RESTDataSource {
 
 	drinkReducer(data) {
 		return {
-			id: data.drinks.idDrink || null,
+			id: data.drinks[0].idDrink || null,
 			name: data.drinks[0].strDrink || null,
 			desc: data.drinks[0].strInstructions || null,
 			img: data.drinks[0].strDrinkThumb || null,
