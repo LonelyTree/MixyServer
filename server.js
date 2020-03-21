@@ -6,6 +6,8 @@ const MixyAPI = require('./mixyAPI.js')
 const server = new ApolloServer({
 	typeDefs,
 	resolvers,
+	introspection: true,
+	playground: true,
 	dataSources: () => {
 		return {
 			mixyAPI: new MixyAPI(),
