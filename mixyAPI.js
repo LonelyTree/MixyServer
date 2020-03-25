@@ -23,6 +23,24 @@ class MixyAPI extends RESTDataSource {
 	}
 
 	drinkReducer(data) {
+		const ingredients = []
+		const measurements = []
+		function getIngredients() {
+			for (const info in data.drinks[0]) {
+				if (info.includes('Ingredient') && data.drinks[0][info] != null) {
+					ingredients.push(data.drinks[0][info])
+				}
+			}
+			return ingredients
+		}
+		function getMeasurements() {
+			for (const info in data.drinks[0]) {
+				if (info.includes('Measure') && data.drinks[0][info] != null) {
+					measurements.push(data.drinks[0][info])
+				}
+			}
+			return measurements
+		}
 		return {
 			id: data.drinks[0].idDrink || null,
 			name: data.drinks[0].strDrink || null,
@@ -30,6 +48,8 @@ class MixyAPI extends RESTDataSource {
 			img: data.drinks[0].strDrinkThumb || null,
 			category: data.drinks[0].strCategory || null,
 			glassType: data.drinks[0].strGlass || null,
+			ingredients: getIngredients(),
+			measurement: getMeasurements(),
 		}
 	}
 	displayReducer(drinks) {

@@ -8,6 +8,8 @@ const typeDefs = gql`
 		img: String!
 		category: String!
 		glassType: String!
+		ingredients: [String]!
+		measurement: [String]!
 	}
 	type DrinkDisplay {
 		id: String!
@@ -52,23 +54,23 @@ module.exports = typeDefs
 // 		strMeasure14: String
 // 		strMeasure15: String
 // 	}
-// 	type Material {
-// 		strIngredient1: String!
-// 		strIngredient2: String
-// 		strIngredient3: String
-// 		strIngredient4: String
-// 		strIngredient5: String
-// 		strIngredient6: String
-// 		strIngredient7: String
-// 		strIngredient8: String
-// 		strIngredient9: String
-// 		strIngredient10: String
-// 		strIngredient11: String
-// 		strIngredient12: String
-// 		strIngredient13: String
-// 		strIngredient14: String
-// 		strIngredient15: String
-// 	}
+// type Material {
+// 	strIngredient1: String!
+// 	strIngredient2: String
+// 	strIngredient3: String
+// 	strIngredient4: String
+// 	strIngredient5: String
+// 	strIngredient6: String
+// 	strIngredient7: String
+// 	strIngredient8: String
+// 	strIngredient9: String
+// 	strIngredient10: String
+// 	strIngredient11: String
+// 	strIngredient12: String
+// 	strIngredient13: String
+// 	strIngredient14: String
+// 	strIngredient15: String
+// }
 
 // 	type Ingredients {
 // 		type: [Material]
